@@ -76,19 +76,19 @@ function counterDate (startDate, endDate) {
     let awalTahun = startDate.getFullYear();
     let akhirTahun = endDate.getFullYear();
 
-    let counterMonth = Math.abs(akhirBulan-awalBulan)
     let counterYear = Math.abs(akhirTahun-awalTahun)
-    if (counterYear < 0) {
-        alert("masukan nilai date dengan benar ! (nilai end date tidak lebih kecil dari start date")
-    }
+    let counterMonth = (akhirBulan-awalBulan)
 
     let counter = counterYear * 12 + counterMonth;
-    
-    if (counter > 12) {
-        let resultYear = "-+ " + counterMonth+ " bulan " + counterYear + " tahun";
-        return resultYear;
-    }else {
-        let resultMonth ="-+ " + counterMonth + " bulan" ;
-        return resultMonth;
+    // return counter
+    if (counter <= 12 ) {
+        let aA = "-+ " + counter + " bulan ";
+        return aA;} 
+        // else if (counter = 12){
+    //     let satuTahun = "-+ 1 tahun"
+    //     return satuTahun } 
+    else {
+        let resultmonth = "-+ " + counterYear + " tahun";
+        return resultmonth;
     }
 }
