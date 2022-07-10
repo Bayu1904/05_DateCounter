@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/style.css">
+    <title>Form</title>
+</head>
+<body>
+    <Nav>
+        <div class="right">
+            <h1><a href="index.html">.BayuSITE</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myProject.html">myProject</a></li>
+            </ul>
+        </div>
+        <div class="left"> 
+            <a href="Form.html"><button class="btn-nav" type="button">Contact Me</button></a>
+        </div>
+    </Nav>
+    <div class="contentForm">
+        <form action="" id="myForm">
+            <h1 class="JUDUL">GET IN TOUCH</h1>
+            <div class="input">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Input your name">
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <input id="email" type="text" placeholder="Input your Email">
+            </div>
+            <div class="input">
+                <label for="phone">Phone</label>
+                <input id="phone" type="text" placeholder="Input your Phone">
+            </div>
+            <div class="input">
+                <label for="subject">Subject</label>
+                <select name="" id="subject">
+                    <option hidden>--Choose Category--</option>
+                    <option>Lets Collaboration</option>
+                    <option>Lets Create Project</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="message">Your Message</label>
+                <textarea name="" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="submit">
+            <button class="data" type="button" onclick="sendMail()">Send Mail</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="Assets/contact.js"></script>
+</html>
