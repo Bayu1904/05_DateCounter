@@ -29,17 +29,17 @@
         <h1 style="text-align: center;"> add My Project HERE </h1>
         <form onsubmit="projectSubmit(event)">
             <label for="projectName">Project Name</label>
-            <input type="text" id="projectName" class="projectName" id="title">
+            <input type="text" id="projectName" class="projectName" id="title" required>
             <div class="flexForm">
                 <label for="startDate" class="kiri">Start Date</label>
                 <label for="endDate" class="kanan">End Date</label><br>
             </div>
             <div class="flexForm">
-                <input type="date" name="" id="startDate" class="kiri">
-                <input type="date" name="" id="endDate" class="kanan">
+                <input type="date" name="" id="startDate" class="kiri" required>
+                <input type="date" name="" id="endDate" class="kanan" required>
             </div>
             <label for="desc">Description</label>
-            <textarea name="" id="desc" cols="30" rows="10" class="projectName"></textarea>
+            <textarea name="" id="desc" cols="30" rows="10" class="projectName" required></textarea>
             <label for="">Technology</label>
             <div class="flexForm">
                 <div class="kiri">
@@ -57,8 +57,8 @@
                     <input type="checkbox" id="react" name="CB" value="react"><label for="react">React JS</label>
                 </div>
             </div>
-            <label for="upload">Upload Image</label>
-            <input type="file" id="imageUpload" class="projectName">
+            <label for="upload" >Upload Image</label>
+            <input type="file" id="imageUpload" class="projectName" required>
             <div class="text-right">
                 <button type="submit" class="btn-project" id="btn-submit">Submit</button>
             </div>

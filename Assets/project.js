@@ -35,7 +35,7 @@ function projectSubmit(event) {
     };
     // console.log(project)
     pushProject.push(project)
-    console.log (pushProject)
+    // console.log (pushProject)
     domInner()
 }
 
@@ -48,7 +48,7 @@ function domInner() {
         content.innerHTML += `
         <div class="post">
                     <img src="${pushProject[i].image}" alt="">
-                    <h3> <a href="detail.html"> ${pushProject[i].title} </a></h3>
+                    <h3> <a href="detail.html" onclick="detailEdit()"> ${pushProject[i].title} </a></h3>
                     <p class="duration">duration : ${pushProject[i].duration}</p>
                     <div class="article"><p> ${pushProject[i].desc}</p></div>
                     <div class="icontech">
@@ -75,20 +75,23 @@ function counterDate (startDate, endDate) {
     let akhirBulan = endDate.getMonth();
     let awalTahun = startDate.getFullYear();
     let akhirTahun = endDate.getFullYear();
+    let awalHari = startDate.getDate();
+    let akhirHari = endDate.getDate();
 
     let counterYear = Math.abs(akhirTahun-awalTahun)
     let counterMonth = (akhirBulan-awalBulan)
 
     let counter = counterYear * 12 + counterMonth;
     // return counter
-    if (counter <= 12 ) {
+    if (counter <= 12 && counter != 0 ) {
         let aA = "-+ " + counter + " bulan ";
         return aA;} 
-        // else if (counter = 12){
-    //     let satuTahun = "-+ 1 tahun"
-    //     return satuTahun } 
+        else if (counter == 0){
+        let satuTahun = `${(akhirHari - awalHari)} hari `
+        return satuTahun } 
     else {
         let resultmonth = "-+ " + counterYear + " tahun";
         return resultmonth;
     }
 }
+
